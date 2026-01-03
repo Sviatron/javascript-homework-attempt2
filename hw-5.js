@@ -15,13 +15,18 @@ switch (choice) {
 }
 console.log(a);
 
-let dayOfWeek = "Monday";
+let dayOfWeek = "Sunday";
 let b;
 switch (dayOfWeek) {
-  case "Monday" || "Tuesday" || "Wednesday" || "Thursday" || "Friday":
+  case "Monday":
+  case "Tuesday":
+  case "Wednesday":
+  case "Thursday":
+  case "Friday":
     b = "That is a working day";
     break;
-  case "Saturday" || "Sunday":
+  case "Saturday":
+  case "Sunday":
     b = "That is a weekend";
     break;
   default:
@@ -32,16 +37,24 @@ console.log(b);
 let monthNum = 6;
 let c;
 switch (monthNum) {
-  case 12 || 1 || 2:
+  case 12:
+  case 1:
+  case 2:
     c = "Winter";
     break;
-  case 3 || 4 || 5:
+  case 3:
+  case 4:
+  case 5:
     c = "Spring";
     break;
-  case 6 || 7 || 8:
+  case 6:
+  case 7:
+  case 8:
     c = "Summer";
     break;
-  case 9 || 10 || 11:
+  case 9:
+  case 10:
+  case 11:
     c = "Autumn";
     break;
   default:
@@ -68,7 +81,7 @@ console.log(d);
 
 let sumOfNumbers = prompt("Enter a math sign");
 let numOne = 6;
-let numTwo = 7;
+let numTwo = 0;
 let p;
 switch (sumOfNumbers) {
   case "+":
@@ -81,7 +94,11 @@ switch (sumOfNumbers) {
     p = numOne * numTwo;
     break;
   case "/":
-    p = numOne / numTwo;
+    if (numTwo === 0) {
+      p = "Not possible";
+    } else {
+      p = numOne / numTwo;
+    }
     break;
   default:
     p = "Not possible";
