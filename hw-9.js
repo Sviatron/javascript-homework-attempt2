@@ -27,29 +27,30 @@ function findLongestWord(string) {
 }
 console.log(findLongestWord("Hi I have Hippopotomonstrosesquipedaliophobia"));
 
-// function formatString(string) {
-//   if (string.length >= 40) {
-//     string.split(" ");
-//     string.splice(39, Infinity), string.splice(39, 0, "...");
-//   }
-// }
-// console.log(formatString("Hi I have Hippopotomonstrosesquipedaliophobia"));
-
-function checkForSpam(message) {
-  if (message.includes("spam " || "sale")) {
-    return !message.includes("spam " || "sale");
-  } else {
-    return message.includes("spam " || "sale");
+function formatString(string) {
+  if (string.length >= 40) {
+    const newArr = string.split("");
+    newArr.splice(39, newArr.length - 39, "...");
+    return newArr.join("");
   }
 }
-console.log(checkForSpam("Hello this isn't or "));
+console.log(formatString("Hi I have Hippopotomonstrosesquipedaliophobia"));
 
-// let input;
-// const numbers = [];
-// let total = 0;
-// function calculation() {
-//   let prompt
-// }
+function checkForSpam(message) {
+  if (message.includes("spam") || message.includes("sale")) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(checkForSpam("Hello this isn't spam or "));
+
+let input;
+const numbers = [];
+let total = 0;
+function calculation() {
+  let prompt
+}
 
 const logins = [
   "sviat@gmail.com",
