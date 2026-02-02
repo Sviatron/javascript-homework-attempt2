@@ -45,12 +45,32 @@ function checkForSpam(message) {
 }
 console.log(checkForSpam("Hello this isn't spam or "));
 
-let input;
-const numbers = [];
-let total = 0;
 function calculation() {
-  let prompt
+  let input;
+  const numbers = [];
+
+  while (true) {
+    input = prompt("Enter a number");
+    if (input === null) {
+      break;
+    }
+
+    const number = Number(input);
+    if (!Number(isNaN(number))) {
+      numbers.push(number);
+    }
+  }
+
+  let total = 0;
+
+  if (numbers.length > 0) {
+    for (const num of numbers) {
+      total += num;
+    }
+    console.log(`The total of yuor numbers is ${total}`);
+  }
 }
+calculation();
 
 const logins = [
   "sviat@gmail.com",
