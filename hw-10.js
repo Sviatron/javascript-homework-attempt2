@@ -5,7 +5,7 @@ const words = ["кіт", "собака", "миша", "папуга", "хомяк
 const countItems = (array, condition) => {
   count = 0;
   for (const element of array) {
-    if (condition === true) {
+    if (condition(element) === true) {
       count += 1;
     }
   }
@@ -44,3 +44,10 @@ console.log(calculate(10, 5, subtract)); // Повинно показати 5
 console.log(calculate(10, 5, multiply)); // Повинно показати 50
 console.log(calculate(10, 5, divide)); // Повинно показати 2
 console.log(calculate(10, 0, divide)); // Повинно показати помилку
+
+function repeatMessage(times, messageCreator) {
+  for (let i = 0; i < times; i++) {
+    messageCreator(i);
+  }
+}
+console.log(repeatMessage(5, (i) => console.log("Повідомлення №" + i)));
