@@ -16,18 +16,52 @@ bankAccount.deposit();
 bankAccount.withdraw();
 console.log(bankAccount);
 
-// const weather = {
-//   temperature: Number(prompt("What teperature is outside?")),
-//   windSpeed: 6,
-//   humidity: 10,
-//   check: function () {
-//     if (this.temperature > 0) {
-//       return "Temperature is bigger than 0'C";
-//     } else if (this.temperature < 0) {
-//       return "Temperature is less than 0'C";
-//     }
-//   },
-// };
-// weather.temperature;
-// console.log(weather.temperature);
-// console.log(weather.check());
+const weather = {
+  temperature: Number(prompt("What teperature is outside?")),
+  windSpeed: 6,
+  humidity: 10,
+  check: function () {
+    if (this.temperature > 0) {
+      return "Temperature is bigger than 0'C";
+    } else if (this.temperature < 0) {
+      return "Temperature is less than 0'C";
+    }
+  },
+};
+weather.temperature;
+console.log(weather.temperature);
+console.log(weather.check());
+
+const user = {
+  name: "Sviat",
+  email: "sviashe@gmail.com",
+  password: 1234567,
+  login: function () {
+    if (
+      this.email.includes("@") &&
+      this.email.length >= 10 &&
+      this.password.length >= 6
+    ) {
+      return "Password and email correct. Welcome, Sviat";
+    }
+  },
+};
+console.log(user);
+console.log(user.login);
+
+const movie = {
+  title: "Big Hero 6",
+  directors: "Don Hall, Chris Williams",
+  year: 2014,
+  rating: 7.8,
+  ratingCheck: function () {
+    if (this.rating > 8) {
+      return true;
+    } else {
+      return false;
+    }
+  },
+};
+movie.ratingCheck();
+console.log(movie);
+console.log(movie.ratingCheck());
