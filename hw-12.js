@@ -53,6 +53,22 @@ function countTotalSalary(employees) {
 }
 console.log(countTotalSalary(salaries));
 
+const vegies = [
+  { name: "Strawberry", price: 130, quantity: 4 },
+  { name: "Raspberry", price: 270, quantity: 3 },
+  { name: "Apple", price: 40, quantity: 7 },
+  { name: "Orange", price: 120, quantity: 2 },
+];
+
+function getAllPropValues(arr, prop) {
+  let newArr = [];
+  for (const entry of arr) {
+    newArr.push(entry[prop]);
+  }
+  return newArr;
+}
+console.log(getAllPropValues(vegies, "name"));
+
 const products = [
   { name: "Strawberry", price: 130, quantity: 4 },
   { name: "Raspberry", price: 270, quantity: 3 },
@@ -62,8 +78,8 @@ const products = [
 function calculateTotalPrice(allProdcuts, productName) {
   let sum = 0;
   for (const item of allProdcuts) {
-    if (products.name === productName) {
-      sum += this.item.price * this.item.quantity;
+    if (item[name] === productName) {
+      sum = item.price * item.quantity;
     }
   }
   return sum;
