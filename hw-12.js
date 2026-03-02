@@ -75,9 +75,9 @@ const products = [
   { name: "Apple", price: 40, quantity: 7 },
   { name: "Orange", price: 120, quantity: 2 },
 ];
-function calculateTotalPrice(allProdcuts, productName) {
+function calculateTotalPrice(arr, productName) {
   let sum = 0;
-  for (const item of allProdcuts) {
+  for (const item of arr) {
     if (item[name] === productName) {
       sum = item.price * item.quantity;
     }
